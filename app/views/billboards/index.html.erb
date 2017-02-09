@@ -1,0 +1,13 @@
+<h1> Billboards </h1>
+<ul>
+  <% @billboards.each do |billboard| %> 
+    <li> 
+    <%= billboard.chart_name %> 
+    <%= link_to 'View', billboard_path(billboard)%>
+    </li>
+  <% end %>
+</ul>
+
+<br />
+
+<%= link_to 'Create New Chart', new_billboard_path %>
